@@ -129,7 +129,6 @@ class ChessGameResets(object):
 class Line(object):
 
     def __init__(self, moves):
-
         self.moves = moves
         self.score = None
 
@@ -248,7 +247,6 @@ class AiMove(object):
         old_threats = {}
         pieces = AiMove.pieces(board, aimove.color)
         for tile in pieces:
-            # p is a tile
             piece = AiMove.piece(board, tile) # not letter
             attackers = AiMove.attackers(board, aimove.color, tile)
             old_threats[piece] = attackers
@@ -283,8 +281,8 @@ class AiMove(object):
         move.threat_changes = AiMove.global_threat_changes(board, move)
         return move
 
+    
     class Move(object):
-
         def __init__(self, color, chess_move):
             self.chess_move = chess_move
             self.color = color
@@ -310,6 +308,7 @@ class AiMove(object):
                     "kills": self.kills, "check": self.check, "checkmate": self.checkmate,
                   "promotion": self.promotion, "threat_changes": self.threat_changes}
             return d_
+
 
 class ChessAi(object):
     """
@@ -349,17 +348,9 @@ class ChessAi(object):
         def __init__(self, aimove, ai):
             self.aimove = aimove
             self.ai = ai
-
-        def scoring_system(self, attributes, info):
-            """ Takes a list of string attributes """
-            score = 0
-            #for item in attributes:
-            #    score += ChessAi.Offense[info[attr]] * ChessAi.AttributeContants[item] * info[item]
-
-            return score
-
+        
+        
         def score(self):
-
             score = 0.0
             attr = self.aimove.get_attributes()
             ChessAi = self.ai
@@ -426,9 +417,11 @@ class ChessAi(object):
             self.aimove.score = score
             return self.aimove.score
 
+        
         def get_score(self):
             return self.score()
 
+        
     class RecuAssess(object):
 
         def __init__(self, board, ChessAi):
