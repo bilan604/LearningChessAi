@@ -92,7 +92,6 @@ def get_legal_chessmoves(board):
 
 
 def get_pieces(board, color):
-        # returns a SquareSet
     pieces = []
     for i in range(1, 7):
         lst = list(board.pieces(i, color))
@@ -126,6 +125,7 @@ class ChessGameResets(object):
             elif self.round > 60:
                 return self.ais[not self.board.turn]
 
+            
 class Line(object):
 
     def __init__(self, moves):
@@ -139,12 +139,9 @@ class Line(object):
         return self.moves[-1].move
 
 class AiMove(object):
-    """
-    Takes a chess.Move()
-    """
+
     @staticmethod
     def piece(board, tile):
-        # takes a from_square?
         """Returns a Piece! Printing gives a letter, """
         return board.piece_at(tile)
 
@@ -166,6 +163,7 @@ class AiMove(object):
                 pieces.append(item)
         return pieces
 
+    
     @staticmethod
     def attackers(board, color, tile):
         attackers = []
