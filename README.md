@@ -1,5 +1,5 @@
 # LearningChessAi
 
-Chess Ai that can be adversarially trained. It plays on the python chess module.
+Chess Ai that plays on the chess module and can be adversarially trained.
 
-Slow because it uses recursive breadth first search. I would use depth first search if I were to redo this.
+Development discontinued in 2020 because it uses bfs instead of dfs, which makes it slow.
