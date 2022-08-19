@@ -10,7 +10,7 @@ A dependency nightmare:
 
 1. It uses recursion. The Chess AI is a Player Class that has a subclass that is the AI, so that for every move it can simulate advantages from the opponent's perspective
 
-2. Global v.s. Local variables. Its an issue for scoring when the moves are theoretical
+2. Global v.s. Local variables. Its an issue for scoring when the moves are theoretical, also has a score for the strength of the position
 
 3. Validation requiring me to play chess against it in the Python output console
 
