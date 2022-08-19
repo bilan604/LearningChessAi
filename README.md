@@ -8,7 +8,7 @@ It uses bfs instead of dfs, which makes it slow. This AI is the second version o
 
 A dependency nightmare:  
 
-1. It uses recursion. The Chess AI is a Player Class that has a subclass that is the AI, so that for every move it can simulate advantages from the opponent's perspective
+1. It uses recursion. The Chess AI is a Player Class that has a subclass that is the AI, so that for every move (level of depth) it can simulate advantages from the opponent's perspective
 
 2. Global v.s. Local variables. Its an issue for scoring when the moves are theoretical, also has a score for the strength of the position
 
