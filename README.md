@@ -3,7 +3,7 @@
 Chess Ai that plays on the chess module and can be adversarially trained.
 
 Development of this AI discontinued in 2021*.
-It uses bfs instead of dfs, which makes it slow. This AI is the second version of the original AI, which I recoded from scratch, due to dependency issues. It does not use bfs because I did not know anything about DeepBlue, but rather because I planned on changing it to dfs in the future. The entire AI works within a single recursive function.  
+It uses bfs instead of dfs, which makes it slow. This AI is the second version of the original AI, which I recoded from scratch, due to dependency issues. It does not use bfs because I did not know anything about DeepBlue, but rather because I planned on changing it to dfs in the future. The entire AI move assessment is operated by a  single recursive function.  
 
 
 A dependency nightmare:  
