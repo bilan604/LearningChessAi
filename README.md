@@ -17,4 +17,9 @@ A dependency nightmare:
 4. Castling and shuffling
 
 
+Generative Adversarial Training:
+
+1. It implements survival of the fittest elimination by spawning copies of the AI class with different hyper-parameters (randomly spread), and then prunes them
+
+2. Learning rate decreases over time, but does not confirm confirm a direction like gradient descent.
 
